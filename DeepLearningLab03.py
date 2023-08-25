@@ -31,4 +31,4 @@ model.compile(optimizer='sgd',loss='categorical_crossentropy',metrics='accuracy'
 #perform training of neural network
 hist = model.fit(train_data,train_lbl,epochs=20,batch_size=80,verbose=1)
 #perform testing on the nural network
-model.save('modelcnn.hdf5')
+# model.save('modelcnn.hdf5')
