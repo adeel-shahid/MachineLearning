@@ -12,7 +12,7 @@
 # 3. Output Gate: controls what information is sent to the next time step.
 
 # Sentimental Ananlysis using LSTM.
-
+from keras.datasets import reuters,imdb
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Embedding, LSTM, Dense
@@ -52,3 +52,9 @@ predictions = model.predict(padded_test_sequences)
 for text, sentiment in zip(test_texts, predictions):
     sentiment_label = "Positive" if sentiment > 0.5 else "Negative"
     print(f"Text: {text} / Sentiment: {sentiment_label} / Confidence: {sentiment[0]}")
+
+
+#####################################################33
+#IMDB
+def IMDB():
+    (train_data, train_lbl), (test_data, test_lbl) = imdb.load_data(num_words=10000)
